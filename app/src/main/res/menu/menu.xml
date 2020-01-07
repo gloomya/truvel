@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/choice"
+        android:title="Main"/>
+    <item android:id="@+id/dates"
+        android:title="Dates"/>
+    <item android:id="@+id/destination"
+        android:title="Destination"/>
+    <item android:id="@+id/type"
+        android:title="Vacation Type"/>
+    <item android:id="@+id/contact"
+        android:title="Contact Us"/>
+</menu>
