@@ -59,4 +59,12 @@ public class ChoiceActivity extends AppCompatActivity {
         Intent calendar = new Intent(getApplicationContext(), CalendarActivity.class);
         startActivity(calendar);
     }
+    public void type(View v) {
+        Intent type = new Intent(getApplicationContext(), TypeActivity.class);
+        startActivity(type);
+    }
+    public void destination(View v) {
+        Intent destination = new Intent(getApplicationContext(), DestinationActivity.class);
+        startActivity(destination);
+    }
 }
