@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 public class CalendarActivity extends AppCompatActivity {
 
@@ -49,5 +50,65 @@ public class CalendarActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+    public void january(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "January");
+        startActivity(datesPage);
+    }
+    public void february(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "February");
+        startActivity(datesPage);
+    }
+    public void march(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "March");
+        startActivity(datesPage);
+    }
+    public void april(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "April");
+        startActivity(datesPage);
+    }
+    public void may(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "May");
+        startActivity(datesPage);
+    }
+    public void june(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "June");
+        startActivity(datesPage);
+    }
+    public void july(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "July");
+        startActivity(datesPage);
+    }
+    public void august(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "August");
+        startActivity(datesPage);
+    }
+    public void september(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "September");
+        startActivity(datesPage);
+    }
+    public void october(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "October");
+        startActivity(datesPage);
+    }
+    public void november(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "November");
+        startActivity(datesPage);
+    }
+    public void december(View v) {
+        Intent datesPage = new Intent(getApplicationContext(), DateActivity.class);
+        datesPage.putExtra("keyMonth", "December");
+        startActivity(datesPage);
     }
 }
