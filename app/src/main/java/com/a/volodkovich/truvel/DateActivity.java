@@ -86,8 +86,8 @@ public class DateActivity extends AppCompatActivity {
                 startActivity(datesPage);
                 break;
             case R.id.destination:
-                Intent destinaionPage = new Intent(getApplicationContext(), DestinationActivity.class);
-                startActivity(destinaionPage);
+                Intent destinationPage = new Intent(getApplicationContext(), DestinationActivity.class);
+                startActivity(destinationPage);
                 break;
             case R.id.type:
                 Intent typePage = new Intent(getApplicationContext(), TypeActivity.class);

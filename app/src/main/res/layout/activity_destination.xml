@@ -54,7 +54,8 @@
                 android:id="@+id/Africa"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="africa">
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -94,6 +95,19 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/africaTitle" />
+
+                <TextView
+                    android:id="@+id/countriesListAfrica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/open_sans"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/africaDesc" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -101,7 +115,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="asia">
 
                 <ImageView
                     android:id="@+id/imageView6"
@@ -148,7 +163,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="australia">
 
                 <ImageView
                     android:id="@+id/imageView9"
@@ -191,11 +207,12 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/Carribean"
+                android:id="@+id/Caribbean"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="caribbean">
 
                 <ImageView
                     android:id="@+id/imageView10"
@@ -208,13 +225,13 @@
                     app:srcCompat="@drawable/carribian" />
 
                 <TextView
-                    android:id="@+id/carribeanTitle"
+                    android:id="@+id/caribbeanTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text="Carribean"
+                    android:text="Caribbean"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -224,17 +241,17 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
                 <TextView
-                    android:id="@+id/carribeanDesc"
+                    android:id="@+id/caribbeanDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="See all our destinations in Carribean"
+                    android:text="See all our destinations in Caribbean"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
                     app:fontFamily="@font/open_sans"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/carribeanTitle" />
+                    app:layout_constraintTop_toBottomOf="@+id/caribbeanTitle" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -242,7 +259,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="central">
 
                 <ImageView
                     android:id="@+id/imageView11"
@@ -289,7 +307,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="europe">
 
                 <ImageView
                     android:id="@+id/imageView7"
@@ -336,7 +355,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="east">
 
                 <ImageView
                     android:id="@+id/imageView8"
@@ -383,7 +403,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="north">
 
                 <ImageView
                     android:id="@+id/imageView12"
@@ -430,7 +451,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="south">
 
                 <ImageView
                     android:id="@+id/imageView13"
@@ -477,7 +499,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:onClick="uk">
 
                 <ImageView
                     android:id="@+id/imageView14"

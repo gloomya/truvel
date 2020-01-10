@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 public class DestinationActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,7 @@ public class DestinationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_destination);
         //        setup the color of action bar to match the page's background
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#845ee8")));
+
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -36,8 +40,8 @@ public class DestinationActivity extends AppCompatActivity {
                 startActivity(datesPage);
                 break;
             case R.id.destination:
-                Intent destinaionPage = new Intent(getApplicationContext(), DestinationActivity.class);
-                startActivity(destinaionPage);
+                Intent destinationPage = new Intent(getApplicationContext(), DestinationActivity.class);
+                startActivity(destinationPage);
                 break;
             case R.id.type:
                 Intent typePage = new Intent(getApplicationContext(), TypeActivity.class);
@@ -49,5 +53,55 @@ public class DestinationActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+    public void africa(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "Africa");
+        startActivity(countryPage);
+    }
+    public void asia(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "Asia");
+        startActivity(countryPage);
+    }
+    public void australia(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "Australia");
+        startActivity(countryPage);
+    }
+    public void caribbean(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "Caribbean");
+        startActivity(countryPage);
+    }
+    public void central(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "Central America");
+        startActivity(countryPage);
+    }
+    public void europe(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "Europe");
+        startActivity(countryPage);
+    }
+    public void east(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "Middle East");
+        startActivity(countryPage);
+    }
+    public void north(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "North America");
+        startActivity(countryPage);
+    }
+    public void south(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "South America");
+        startActivity(countryPage);
+    }
+    public void uk(View v) {
+        Intent countryPage = new Intent(getApplicationContext(), CountryActivity.class);
+        countryPage.putExtra("keyCountry", "United Kingdom");
+        startActivity(countryPage);
     }
 }
