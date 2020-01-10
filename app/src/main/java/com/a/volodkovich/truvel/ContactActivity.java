@@ -3,6 +3,7 @@ package com.a.volodkovich.truvel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,6 +20,7 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         usrName = findViewById(R.id.inputName);
         usrEmail = findViewById(R.id.inputEmail);
         usrMsg = findViewById(R.id.inputMsg);

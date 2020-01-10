@@ -3,6 +3,7 @@ package com.a.volodkovich.truvel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class VacationActivity extends AppCompatActivity {
 
@@ -18,12 +20,32 @@ public class VacationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vacation);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //        setup the color of action bar to match the page's background
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#e8526c")));
 //        String type = getIntent().getExtras().getString("keyType");
         tours = findViewById(R.id.toursType);
         tours.setBackgroundColor(Color.TRANSPARENT);
 
+        //hide navbar on webpage
+
+        tours.getSettings().setJavaScriptEnabled(true);
+
+        tours.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url)
+            {
+                // hide element by class name
+                tours.loadUrl("javascript:(function() { " +
+                        "document.getElementsByClassName('navbar').style.display='none'; })()");
+//                hide element by id
+//                tours.loadUrl("javascript:(function() { " +
+//                        "document.getElementById('your_id').style.display='none';})()");
+
+            }
+        });
+
+        tours.loadUrl("https://www.responsibletravel.com/types/");
 //        switch(type) {
 //            case "January":
 //                tours.loadUrl("https://www.responsibletravel.com/copy/where-to-go-on-holiday-in-january");
