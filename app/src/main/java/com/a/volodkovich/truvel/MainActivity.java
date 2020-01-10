@@ -8,14 +8,55 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    Animation fadeanim, slideleft, slideright;
+    ImageView logo;
+    TextView name, desc, motto;
+    View divider;
+    ImageButton go;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+        name = findViewById(R.id.appName);
+        desc = findViewById(R.id.appDesc);
+        motto = findViewById(R.id.appMotto);
+        divider = findViewById(R.id.divider);
+
+        logo = findViewById(R.id.logoImg);
+        go = findViewById(R.id.goBtn);
+
+
+        slideleft = AnimationUtils.loadAnimation(this, R.anim.slide_in_left);
+        slideleft.reset();
+        logo.clearAnimation();
+        logo.startAnimation(slideleft);
+        name.clearAnimation();
+        name.startAnimation(slideleft);
+        desc.clearAnimation();
+        desc.startAnimation(slideleft);
+
+        slideright = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
+        slideright.reset();
+        motto.clearAnimation();
+        motto.startAnimation(slideright);
+        divider.clearAnimation();
+        divider.startAnimation(slideright);
+
+        fadeanim = AnimationUtils.loadAnimation(this, R.anim.fadein);
+        fadeanim.reset();
+        go.clearAnimation();
+        go.startAnimation(fadeanim);
+
     }
 
     public void choice(View v) {
